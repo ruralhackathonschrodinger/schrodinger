@@ -11,7 +11,7 @@
                 <div class="card h-100">
                     <div>
                         {% if urgencia.imagen is defined %}
-                            <img class="card-img-top" src="" alt="Imagen urgencia">
+                            <img class="card-img-top" src='/image/{{urgencia.imagen}}'  alt="Imagen urgencia">
                         {% endif %}
                     </div>
                     <div class="card-body">
@@ -22,3 +22,4 @@
         {% endfor %}
     </div>
     {% endfor %}
+{% endblock %}

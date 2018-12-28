@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Urgencia{% endblock %}
+{% block title %}Editar teléfono de urgencia{% endblock %}
 
 {% block body %}
-    <h1>Edit Urgencia</h1>
+    <h1>Editar teléfono de urgencia</h1>
 
-    {{ include('urgencia/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('urgencia/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-    <a href="{{ path('urgencia_index') }}">back to list</a>
+    <a href="{{ path('urgencia_index') }}">Volver</a>
 
     {{ include('urgencia/_delete_form.html.twig') }}
 {% endblock %}

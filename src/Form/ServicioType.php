@@ -6,6 +6,8 @@ use App\Entity\Servicio;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ServicioType extends AbstractType
 {
@@ -13,11 +15,19 @@ class ServicioType extends AbstractType
     {
         $builder
             ->add('nombre')
-            ->add('telefono')
-            ->add('direccion')
+            ->add('telefono', TextType::class, array(
+                'label' => 'Teléfono'
+            ))
+            ->add('direccion', TextType::class, array(
+                'label' => 'Dirección'
+            ))
             ->add('web')
             ->add('email')
             ->add('logo')
+            ->add('save', SubmitType::class, array(
+                'attr' => array('class' => 'btn float-right'),
+                'label' => 'Guardar'
+            ));
         ;
     }
 

@@ -6,6 +6,8 @@ use App\Entity\Urgencia;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class UrgenciaType extends AbstractType
 {
@@ -13,8 +15,17 @@ class UrgenciaType extends AbstractType
     {
         $builder
             ->add('nombre')
-            ->add('telefono')
-            ->add('direccion')
+            ->add('telefono', TextType::class, array(
+                'label' => 'Teléfono'
+            ))
+            ->add('imagen')
+            ->add('direccion', TextType::class, array(
+                'label' => 'Dirección'
+            ))
+            ->add('save', SubmitType::class, array(
+                'attr' => array('class' => 'btn float-right'),
+                'label' => 'Guardar'
+            ));
         ;
     }
 

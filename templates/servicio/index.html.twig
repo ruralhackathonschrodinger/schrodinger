@@ -10,7 +10,7 @@
             <div  class="col-xs-12 col-sm-6 col-md-4">
                 <div class="card">
                 <a data-toggle="modal" data-target="#modalservicio">    
-                    <img class="card-img-top" src="" alt="Card image cap">
+                    <img class="card-img-top" src='/image/{{servicio.logo}}' height="40px" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{ servicio.nombre}}</h5></a>                                  
                     </div>
@@ -30,10 +30,14 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <img class="card-img-top" src="" alt="Card image cap">                        
+                        <img class="card-img-top" src='/image/{{servicio.logo}}' height="40px" alt="Card image cap">
                         <p>Teléfono: {{ servicio.telefono}} </p>
+                        {% if servicio.web != null %}
                         <p>Web: {{ servicio.web}} </p>
-                        <p>Email: {{ servicio.web}} </p>
+                        {% endif %}
+                        {% if servicio.email != null %}
+                        <p>Email: {{ servicio.email}} </p>
+                        {% endif %}
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
