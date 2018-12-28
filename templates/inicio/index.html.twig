@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div>
+        <a href="{{ path('urgencia_index') }}">Teléfonos de urgencia</a>
+    </div>
+    <div>
+        <a href="{{ path('servicio_index') }}">Servicios</a>
+    </div>
+    <div>
+        <a href="{{ path('evento_index') }}">Eventos</a>
+    </div>
+</div>
+{% endblock %}

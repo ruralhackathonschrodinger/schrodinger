@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Servicio{% endblock %}
+
+{% block body %}
+    <h1>Servicio</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ servicio.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ servicio.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ servicio.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ servicio.direccion }}</td>
+            </tr>
+            <tr>
+                <th>Web</th>
+                <td>{{ servicio.web }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ servicio.email }}</td>
+            </tr>
+            <tr>
+                <th>Logo</th>
+                <td>{{ servicio.logo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('servicio_index') }}">back to list</a>
+
+    <a href="{{ path('servicio_edit', {'id': servicio.id}) }}">edit</a>
+
+    {{ include('servicio/_delete_form.html.twig') }}
+{% endblock %}

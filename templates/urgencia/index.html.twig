@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Urgencias{% endblock %}
+
+{% block body %}
+    <h1>Urgencias</h1>
+    {% for row in urgencias|batch(6) %}
+    <div class="row">
+        {% for urgencia in row %} 
+            <div class="col-sm-2">
+                <div class="card h-100">
+                    <div>
+                        {% if urgencia.imagen is defined %}
+                            <img class="card-img-top" src="" alt="Imagen urgencia">
+                        {% endif %}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{urgencia.telefono}}</h5>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
