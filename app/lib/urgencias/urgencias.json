@@ -1,0 +1,27 @@
+[
+    {
+        "nombre": "Policía Local",
+        "telefono": "669 48 32 35",
+        "direccion": "San Mateo, 1"
+    },
+    {
+        "nombre": "Guardia Civil",
+        "telefono": "",
+        "direccion": ""
+    },
+    {
+        "nombre": "Bomberos",
+        "telefono": "924 40 02 27",
+        "direccion": ""
+    },
+    {
+        "nombre": "Centro de Salud (Urgencias)",
+        "telefono": "",
+        "direccion": ""
+    },
+    {
+        "nombre": "",
+        "telefono": "",
+        "direccion": ""
+    }
+]

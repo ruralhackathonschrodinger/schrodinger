@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Rural Hackathon",
+        "fecha": "28-12-2018",
+        "foto": "http://www.ruralhackathon.com/img/RuralHackaton_fondo_Fondo.png",
+        "descripcion": "Rural Hackaton 2018 es un encuentro organizado por Fundecyt-pctex y la Oficina para la Innovación en colaboración con Metaphase07, en el que desarrolladores de todo el territorio español, en particular Extremadura plantean soluciones tecnológicas para resolver un reto en sólo 24 horas.",
+        "localizacion": "Casa de la Cultura"
+    },
+    {
+        "nombre": "Festival Medieval",
+        "fecha": "17-08-18",
+        "foto": "https://static2.hoy.es/www/multimedia/201806/21/media/cortadas/35839789_1897677047199063_7955576439300947968_n-kp0H-U60113780784C5C-624x385@Hoy.jpg",
+        "descripcion": "El Festival Medieval Villa de Alburquerque, Fiesta de Interés Turístico Regional, celebra este año su vigésimo quinta edición, que ya cuenta con cartel anunciador para conmemorar este cuarto de siglo.",
+        "localizacion": "Alburquerque"
+    },
+    {
+        "nombre": "Contempopranea",
+        "fecha": "20-07-2018",
+        "foto": "https://www.dodmagazine.es/wp-content/uploads/2017/08/contempopranea-2018.png",
+        "descripcion": "Contempopránea es un festival de música pop independiente que se celebra todos los veranos en Alburquerque. En él se reúnen año tras año numerosos artistas de la escena indie española, y millares de seguidores.",
+        "localizacion": "Paseo de las Laderas"
+    },
+    {
+        "nombre": "Semana Santa",
+        "fecha": "27-03-2018",
+        "foto": "https://www.baylio.com/wp-content/uploads/2017/04/id170417-semana-santa-800x500_c.jpg",
+        "descripcion": "En La Semana Santa de Alburquerque cabe destacar la representación de la Pasión y Muerte de Jesús y una procesión medieval por el Barrio Gótico, además de otros recorridos procesionales por la villa. La procesión por el barrio gótico, es una procesión de carácter medieval. El cristo que procesiona es el Cristo del Amparo, talla del siglo XVIII, que tiene su sede canónica en la Parroquia Matriz de Santa María del Mercado, Durante el recorrido se cantan saetas.",
+        "localizacion": "Alburquerque"
+    }
+]
