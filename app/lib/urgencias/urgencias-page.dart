@@ -41,6 +41,19 @@ class _UrgenciasState extends State<Urgencias> {
       appBar: new AppBar(
         centerTitle: true,
         title: new Text('Urgencias'),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.refresh),
+            onPressed: () {
+              if (mounted) {
+                setState(() {
+                  _isLoading = true;
+                });
+              }
+              _fetchData();
+            },
+          )
+        ],
       ),
       body: new Center(
         child: _isLoading

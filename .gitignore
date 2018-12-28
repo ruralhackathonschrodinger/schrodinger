@@ -22,3 +22,14 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
+###> flutter <###
+app/.atom/
+app/.idea
+app/.packages
+app/.pub/
+app/build/
+app/ios/.generated/
+app/packages
+app/pubspec.lock
+app/.flutter-plugins
