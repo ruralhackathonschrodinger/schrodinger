@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import './servicio.dart';
+import './restaurantes-page.dart';
+import './hoteles-page.dart';
+import './transportes-page.dart';
+import './comunicaciones-page.dart';
 
 class Servicios extends StatefulWidget {
   State<StatefulWidget> createState() {
@@ -10,32 +11,6 @@ class Servicios extends StatefulWidget {
 }
 
 class _ServiciosState extends State<Servicios> {
-  bool _isLoading = true;
-  var servicios;
-
-  _fetchData() async {
-    await new Future.delayed(const Duration(seconds: 1));
-    final url = 'https://api.myjson.com/bins/ixw18';
-    final response = await http.get(url);
-
-    if (response.statusCode == 200) {
-      List<dynamic> serviciosJson = json.decode(utf8.decode(response.bodyBytes));
-
-      if (mounted) {
-        setState(() {
-          _isLoading = false;
-          this.servicios = serviciosJson;
-        });
-      }
-    }
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    _fetchData();
-  }
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -43,21 +18,86 @@ class _ServiciosState extends State<Servicios> {
         centerTitle: true,
         title: new Text('Servicios'),
       ),
-      body: new Center(
-        child: _isLoading
-            ? new CircularProgressIndicator()
-            : new ListView.builder(
-                itemCount: this.servicios != null ? this.servicios.length : 0,
-                itemBuilder: (context, i) {
-                  final servicio = this.servicios[i];
-                  return new FlatButton(
-                    padding: new EdgeInsets.all(0.0),
-                    child: new Servicio(servicio),
-                    onPressed: () => {},
-                  );
-                },
-              ),
-      ),
+      body: new Container(
+          child: new ListView(
+        children: <Widget>[
+          new Container(
+            height: 20.0,
+          ),
+          FlatButton(
+            onPressed: () => Navigator.push(
+                context,
+                new MaterialPageRoute(
+                    builder: (context) => new Restaurantes())),
+            padding: EdgeInsets.all(50.0),
+            child: Row(
+              // Replace with a Row for horizontal icon + text
+              children: <Widget>[
+                Icon(Icons.local_pizza),
+                Text(' Restaurantes',
+                    style: new TextStyle(
+                        fontSize: 20.0, fontWeight: FontWeight.bold))
+              ],
+            ),
+          ),
+          new Container(
+            height: 10.0,
+          ),
+          FlatButton(
+            onPressed: () => Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new Hoteles())),
+            padding: EdgeInsets.all(50.0),
+            child: Row(
+              // Replace with a Row for horizontal icon + text
+              children: <Widget>[
+                Icon(Icons.hotel),
+                Text(' Hoteles',
+                    style: new TextStyle(
+                        fontSize: 20.0, fontWeight: FontWeight.bold))
+              ],
+            ),
+          ),
+          new Container(
+            height: 10.0,
+          ),
+          FlatButton(
+            onPressed: () => Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new Transportes())),
+            padding: EdgeInsets.all(50.0),
+            child: Row(
+              // Replace with a Row for horizontal icon + text
+              children: <Widget>[
+                Icon(Icons.directions_bus),
+                Text(' Transporte',
+                    style: new TextStyle(
+                        fontSize: 20.0, fontWeight: FontWeight.bold))
+              ],
+            ),
+          ),
+          new Container(
+            height: 10.0,
+          ),
+          FlatButton(
+            onPressed: () => Navigator.push(
+                context,
+                new MaterialPageRoute(
+                    builder: (context) => new Comunicaciones())),
+            padding: EdgeInsets.all(50.0),
+            child: Row(
+              // Replace with a Row for horizontal icon + text
+              children: <Widget>[
+                Icon(Icons.radio),
+                Text(' Comunicaciones',
+                    style: new TextStyle(
+                        fontSize: 20.0, fontWeight: FontWeight.bold))
+              ],
+            ),
+          ),
+          new Container(
+            height: 8.0,
+          ),
+        ],
+      )),
     );
   }
 }

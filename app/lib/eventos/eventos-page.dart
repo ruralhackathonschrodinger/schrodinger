@@ -15,7 +15,6 @@ class _EventosState extends State<Eventos> {
   var eventos;
 
   _fetchData() async {
-    await new Future.delayed(const Duration(seconds: 1));
     final url = 'https://api.myjson.com/bins/v59xo';
     final response = await http.get(url);
 

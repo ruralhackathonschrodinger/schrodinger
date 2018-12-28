@@ -13,12 +13,12 @@ class Evento extends StatelessWidget {
           padding: new EdgeInsets.all(16.0),
           child: new Column(
             children: <Widget>[
-              evento['foto'] != null
+              evento['foto'] != ''
                   ? new Image.network(evento['foto'])
                   : new Text('Evento sin imagen.'),
               new Container(height: 8.0),
               new Text(
-                  evento['nombre'] != null
+                  evento['nombre'] != ''
                       ? evento['nombre']
                       : 'Evento sin título.',
                   textAlign: TextAlign.center,

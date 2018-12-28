@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import './urgencia.dart';
+import './servicio.dart';
 
-class Urgencias extends StatefulWidget {
+class Comunicaciones extends StatefulWidget {
   State<StatefulWidget> createState() {
-    return _UrgenciasState();
+    return _ComunicacionesState();
   }
 }
 
-class _UrgenciasState extends State<Urgencias> {
-  var urgencias;
+class _ComunicacionesState extends State<Comunicaciones> {
   bool _isLoading = true;
+  var comunicaciones;
 
-    _fetchData() async {
-    final url = 'https://api.myjson.com/bins/jd3vg';
+  _fetchData() async {
+    final url = 'https://api.myjson.com/bins/16aido';
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
-      List<dynamic> urgenciasJson = json.decode(utf8.decode(response.bodyBytes));
+      List<dynamic> comunicacionesJson = json.decode(utf8.decode(response.bodyBytes));
 
       if (mounted) {
         setState(() {
           _isLoading = false;
-          this.urgencias = urgenciasJson;
+          this.comunicaciones = comunicacionesJson;
         });
       }
     }
@@ -40,18 +40,31 @@ class _UrgenciasState extends State<Urgencias> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text('Urgencias'),
+        title: new Text('Comunicaciones'),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.refresh),
+            onPressed: () {
+              if (mounted) {
+                setState(() {
+                  _isLoading = true;
+                });
+              }
+              _fetchData();
+            },
+          )
+        ],
       ),
       body: new Center(
         child: _isLoading
             ? new CircularProgressIndicator()
             : new ListView.builder(
-                itemCount: this.urgencias != null ? this.urgencias.length : 0,
+                itemCount: this.comunicaciones != null ? this.comunicaciones.length : 0,
                 itemBuilder: (context, i) {
-                  final urgencia = this.urgencias[i];
+                  final servicio = this.comunicaciones[i];
                   return new FlatButton(
                     padding: new EdgeInsets.all(0.0),
-                    child: new Urgencia(urgencia),
+                    child: new Servicio(servicio),
                     onPressed: () => {},
                   );
                 },

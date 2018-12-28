@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "TDA",
+        "logo": "http://www.tdacomunicaciones.com/fuente/P2016.png",
+        "telefono": "924 40 02 07",
+        "direccion": "Del Pilar, 13",
+        "web": "",
+        "email": ""
+    },
+    {
+        "nombre": "RCA",
+        "logo": "http://www.alburquerque.es/repositorio/20130426133842.jpg",
+        "telefono": "924 40 10 11",
+        "direccion": "Plaza de España, 16",
+        "web": "",
+        "email": ""
+    }
+]

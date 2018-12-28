@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Asador MaxiPollo",
+        "logo": "https://media-cdn.tripadvisor.com/media/photo-s/0a/14/09/c1/pollo-asado.jpg",
+        "telefono": "924 10 57 35",
+        "direccion": "Plaza de España, 17",
+        "web": "",
+        "email": ""
+    },
+    {
+        "nombre": "El fogón de Santa María",
+        "logo": "https://media-cdn.tripadvisor.com/media/photo-s/04/7a/83/35/el-fogon-de-santa-maria.jpg",
+        "telefono": "660 03 13 00",
+        "direccion": "Santa María, 1",
+        "web": "",
+        "email": ""
+    },
+    {
+        "nombre": "Restaurante Rolan",
+        "logo": "https://console.listae.com/files/2017/02/restaurante_rolan_alburquerque.jpg",
+        "telefono": "",
+        "direccion": "Moreno Nieto, 18",
+        "web": "",
+        "email": ""
+    }
+]

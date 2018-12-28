@@ -13,23 +13,23 @@ class Servicio extends StatelessWidget {
           padding: new EdgeInsets.all(16.0),
           child: new Column(
             children: <Widget>[
-              servicio['logo'] != null
+              servicio['logo'] != ''
                   ? new Image.network(servicio['logo'])
                   : new Text('Servicio sin logo.'),
               new Container(height: 8.0),
-              servicio['nombre'] != null
+              servicio['nombre'] != ''
                   ? new Text(servicio['nombre'])
                   : new Text('Servicio sin nombre.'),
               new Container(height: 8.0),
-              servicio['telefono'] != null
-                  ? new Text(servicio['telefono'],
+              servicio['telefono'] != ''
+                  ? new Text('Tel. ' + servicio['telefono'],
                       textAlign: TextAlign.center,
                       style: new TextStyle(
                           fontSize: 16.0, fontWeight: FontWeight.bold))
                   : new Text('Servicio sin teléfono.'),
               new Container(height: 8.0),
-              servicio['direccion'] != null
-                  ? new Text(servicio['direccion'])
+              servicio['direccion'] != ''
+                  ? new Text('C. ' + servicio['direccion'])
                   : new Text('Servicio sin dirección.')
             ],
           ),
