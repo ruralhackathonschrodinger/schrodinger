@@ -13,10 +13,6 @@ class Urgencia extends StatelessWidget {
           padding: new EdgeInsets.all(16.0),
           child: new Column(
             children: <Widget>[
-              urgencia['logo'] != null
-                  ? new Image.network(urgencia['logo'])
-                  : new Text('Urgencia sin logo.'),
-              new Container(height: 8.0),
               urgencia['nombre'] != null
                   ? new Text(urgencia['nombre'])
                   : new Text('Urgencia sin nombre.'),

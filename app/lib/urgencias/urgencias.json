@@ -6,22 +6,22 @@
     },
     {
         "nombre": "Guardia Civil",
-        "telefono": "",
-        "direccion": ""
+        "telefono": "924 40 00 05 ",
+        "direccion": "Calle de Mayorga, 0"
     },
     {
         "nombre": "Bomberos",
         "telefono": "924 40 02 27",
-        "direccion": ""
+        "direccion": "Calle la Encina, 1"
     },
     {
         "nombre": "Centro de Salud (Urgencias)",
-        "telefono": "",
-        "direccion": ""
+        "telefono": "924 40 06 50",
+        "direccion": "Calle Santiago, 0"
     },
     {
-        "nombre": "",
-        "telefono": "",
-        "direccion": ""
+        "nombre": "Centro de Salud (Cita previa)",
+        "telefono": "901 10 07 37",
+        "direccion": "Calle Santiago, 0"
     }
 ]
